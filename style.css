@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: "Roboto";
   color: #F0F0F1;
-  background-color: #292C44;
+  background-color: #141414;
   max-width: 100% !important;
 }
 body h1, body h2, body h3, body .title, body .subtitle, body .btn, body .selector {
@@ -254,7 +254,7 @@ body .block-03 .selector .item-selector .txt {
   display: inline-block;
   cursor: pointer;
   padding: 10px 15px;
-  background: #292C44;
+  background: #141414;
   z-index: 1;
   border: solid 3px transparent;
   color: #F0F0F1;
@@ -481,7 +481,7 @@ body .block-03 .info-3 .course .subtitle {
   letter-spacing: 2px;
 }
 body .gradientBG {
-  background: linear-gradient(180deg, #292C44, black);
+  background: linear-gradient(180deg, #141414, black);
 }
 body .block-04 {
   text-align: center;
