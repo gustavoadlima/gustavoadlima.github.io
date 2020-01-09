@@ -22,7 +22,8 @@ body .color2 {
   animation-fill-mode: forwards;
 }
 body .navbar {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.4);
+  -moz-background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   width: 100%;
   height: 60px;
@@ -30,6 +31,7 @@ body .navbar {
   justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 999;
+  backdrop-filter: blur(8px);
 }
 body .navbar .logo {
   font-family: "Black Ops One", cursive;
@@ -83,6 +85,10 @@ body .navbar ul li a:hover {
     border-bottom: 0;
     height: 100%;
   }
+  body .navbar.open .logo {
+    text-align: center;
+    margin-left: 0px;
+  }
 }
 body .block-02 .content, body .block-03, body .block-04, body .block-05 {
   max-width: 900px;
@@ -107,13 +113,28 @@ body .block-01 .title {
   font-size: 38px;
   margin-bottom: 0px;
 }
+@media screen and (max-width: 992px) {
+  body .block-01 .title {
+    font-size: 28px;
+  }
+}
 body .block-01 .name {
   font-size: 72px;
   margin: 15px;
 }
+@media screen and (max-width: 992px) {
+  body .block-01 .name {
+    font-size: 48px;
+  }
+}
 body .block-01 .subtitle {
   font-size: 22px;
   margin-bottom: 48px;
+}
+@media screen and (max-width: 992px) {
+  body .block-01 .subtitle {
+    font-size: 20px;
+  }
 }
 body .block-01 a {
   color: #F0F0F1;
@@ -167,7 +188,7 @@ body .block-02 .gallery .gallery-item .img {
   max-width: 100%;
 }
 body .block-02 .gallery .gallery-item .overlay {
-  background-color: rgba(7, 10, 64, 0.75);
+  background-color: rgba(20, 20, 20, 0.8);
   transition: 0.8s;
   height: 200px;
   text-align: center;
@@ -1041,7 +1062,7 @@ body .block-05 .content {
   margin-top: -630px;
   z-index: 2;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.9);
   height: 600px;
   margin-bottom: 0px;
 }
@@ -1073,6 +1094,9 @@ body .block-05 .content .links {
   justify-content: space-between;
   font-size: 26px;
 }
+body .block-05 .content .links a {
+  color: #F0F0F1;
+}
 @media screen and (max-width: 992px) {
   body .block-05 .content {
     background-color: rgba(0, 0, 0, 0.9);
@@ -1103,7 +1127,7 @@ body .menu {
   bottom: 70px;
   left: 15px;
   font-size: 30px;
-  z-index: 99;
+  z-index: 999;
   transition: 1s;
   width: 30px;
 }
