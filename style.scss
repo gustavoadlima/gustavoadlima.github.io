@@ -18,7 +18,9 @@ $rotation: 45deg;
 $translateY: ($height-icon / 2);
 $translateX: 0;
 
-
+// .amount[data-progress-percent="10"]{
+//     width: 10%;
+// }
 *{
     scroll-behavior: smooth;
 }
@@ -173,6 +175,9 @@ body{
         text-align: center;
         .title{
             font-size: 36px;
+        }
+        .text{
+            margin :20px 50px;
         }
         .gallery{
             width:100%;
@@ -350,13 +355,39 @@ body{
                     }
                     .amount{
                         position: absolute;
-                        width: 10%;
                         right: 0;
                         top: 0;
                         bottom: 0;
                         z-index: 23;
                         height: 20px;
                         background-color:#F0F0F1;
+                        &[data-progress-percent="10"]{
+                            width: 10%;
+                        }
+                        &[data-progress-percent="20"]{
+                            width: 20%;
+                        }
+                        &[data-progress-percent="30"]{
+                            width: 30%;
+                        }
+                        &[data-progress-percent="40"]{
+                            width: 40%;
+                        }
+                        &[data-progress-percent="50"]{
+                            width: 50%;
+                        }
+                        &[data-progress-percent="60"]{
+                            width: 60%;
+                        }
+                        &[data-progress-percent="70"]{
+                            width: 70%;
+                        }
+                        &[data-progress-percent="80"]{
+                            width: 80%;
+                        }
+                        &[data-progress-percent="90"]{
+                            width: 90%;
+                        }
                     }
                     .progress {
                         position: absolute;
@@ -527,13 +558,13 @@ body{
                 .subtitle{
                     font-size:28px;
                 }
-                p {
+                .section {
                     border-top: 3px solid;
                     border-image: linear-gradient(45deg, #FF5349 0%, darken(#FF5349, 20%));
                     border-image-slice: 1;
                     border-width: 3px;
                     margin: 0;
-                    padding: 40px;
+                    padding: 30px;
                     counter-increment: section;
                     position: relative;
                     color: #F0F0F1;
@@ -551,8 +582,13 @@ body{
                         font-size: 12px;
                         font-weight: 600;
                     }
+                    .subtitle,.scholl,.date{
+                        margin: 5px 0;
+                        letter-spacing: 1px;
+
+                    }
                 }
-                p:nth-child(odd) {
+                .section:nth-child(odd) {
                     border-right: 3px solid;
                     padding-left: 0;    
                     .ano {
@@ -561,7 +597,7 @@ body{
                       top: calc(50% - 26px);
                     }
                 }
-                p:nth-child(even) {
+                .section:nth-child(even) {
                     border-left: 3px solid;
                     padding-right: 0;
                     
@@ -640,12 +676,14 @@ body{
           }
         .content{
             padding-top: 50px;
-            margin-top: -630px;
+            margin-top: -610px;
             z-index: 2;
             position: relative;
             background-color: rgba(0,0,0,.90);
-            height: 600px;
+            height: 560px;
             margin-bottom: 0px;
+            padding-left: 10px;
+            padding-right: 10px;
             .title{
                 font-size:36px;
             }

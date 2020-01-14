@@ -169,6 +169,9 @@ body .block-02 {
 body .block-02 .title {
   font-size: 36px;
 }
+body .block-02 .text {
+  margin: 20px 50px;
+}
 body .block-02 .gallery {
   width: 100%;
   max-width: 800px;
@@ -345,13 +348,39 @@ body .block-03 .info.info-1 .bars .bar, body .block-03 .info.info-2 .bars .bar, 
 }
 body .block-03 .info.info-1 .bars .amount, body .block-03 .info.info-2 .bars .amount, body .block-03 .info.info-3 .bars .amount, body .block-03 .info.info-4 .bars .amount {
   position: absolute;
-  width: 10%;
   right: 0;
   top: 0;
   bottom: 0;
   z-index: 23;
   height: 20px;
   background-color: #F0F0F1;
+}
+body .block-03 .info.info-1 .bars .amount[data-progress-percent="10"], body .block-03 .info.info-2 .bars .amount[data-progress-percent="10"], body .block-03 .info.info-3 .bars .amount[data-progress-percent="10"], body .block-03 .info.info-4 .bars .amount[data-progress-percent="10"] {
+  width: 10%;
+}
+body .block-03 .info.info-1 .bars .amount[data-progress-percent="20"], body .block-03 .info.info-2 .bars .amount[data-progress-percent="20"], body .block-03 .info.info-3 .bars .amount[data-progress-percent="20"], body .block-03 .info.info-4 .bars .amount[data-progress-percent="20"] {
+  width: 20%;
+}
+body .block-03 .info.info-1 .bars .amount[data-progress-percent="30"], body .block-03 .info.info-2 .bars .amount[data-progress-percent="30"], body .block-03 .info.info-3 .bars .amount[data-progress-percent="30"], body .block-03 .info.info-4 .bars .amount[data-progress-percent="30"] {
+  width: 30%;
+}
+body .block-03 .info.info-1 .bars .amount[data-progress-percent="40"], body .block-03 .info.info-2 .bars .amount[data-progress-percent="40"], body .block-03 .info.info-3 .bars .amount[data-progress-percent="40"], body .block-03 .info.info-4 .bars .amount[data-progress-percent="40"] {
+  width: 40%;
+}
+body .block-03 .info.info-1 .bars .amount[data-progress-percent="50"], body .block-03 .info.info-2 .bars .amount[data-progress-percent="50"], body .block-03 .info.info-3 .bars .amount[data-progress-percent="50"], body .block-03 .info.info-4 .bars .amount[data-progress-percent="50"] {
+  width: 50%;
+}
+body .block-03 .info.info-1 .bars .amount[data-progress-percent="60"], body .block-03 .info.info-2 .bars .amount[data-progress-percent="60"], body .block-03 .info.info-3 .bars .amount[data-progress-percent="60"], body .block-03 .info.info-4 .bars .amount[data-progress-percent="60"] {
+  width: 60%;
+}
+body .block-03 .info.info-1 .bars .amount[data-progress-percent="70"], body .block-03 .info.info-2 .bars .amount[data-progress-percent="70"], body .block-03 .info.info-3 .bars .amount[data-progress-percent="70"], body .block-03 .info.info-4 .bars .amount[data-progress-percent="70"] {
+  width: 70%;
+}
+body .block-03 .info.info-1 .bars .amount[data-progress-percent="80"], body .block-03 .info.info-2 .bars .amount[data-progress-percent="80"], body .block-03 .info.info-3 .bars .amount[data-progress-percent="80"], body .block-03 .info.info-4 .bars .amount[data-progress-percent="80"] {
+  width: 80%;
+}
+body .block-03 .info.info-1 .bars .amount[data-progress-percent="90"], body .block-03 .info.info-2 .bars .amount[data-progress-percent="90"], body .block-03 .info.info-3 .bars .amount[data-progress-percent="90"], body .block-03 .info.info-4 .bars .amount[data-progress-percent="90"] {
+  width: 90%;
 }
 body .block-03 .info.info-1 .bars .progress, body .block-03 .info.info-2 .bars .progress, body .block-03 .info.info-3 .bars .progress, body .block-03 .info.info-4 .bars .progress {
   position: absolute;
@@ -521,18 +550,18 @@ body .block-04 .timeline .block1, body .block-04 .timeline .block2 {
 body .block-04 .timeline .block1 .subtitle, body .block-04 .timeline .block2 .subtitle {
   font-size: 28px;
 }
-body .block-04 .timeline .block1 p, body .block-04 .timeline .block2 p {
+body .block-04 .timeline .block1 .section, body .block-04 .timeline .block2 .section {
   border-top: 3px solid;
   border-image: linear-gradient(45deg, #FF5349 0%, #e20c00);
   border-image-slice: 1;
   border-width: 3px;
   margin: 0;
-  padding: 40px;
+  padding: 30px;
   counter-increment: section;
   position: relative;
   color: #F0F0F1;
 }
-body .block-04 .timeline .block1 p .ano, body .block-04 .timeline .block2 p .ano {
+body .block-04 .timeline .block1 .section .ano, body .block-04 .timeline .block2 .section .ano {
   content: counter(section);
   position: absolute;
   border-radius: 50%;
@@ -546,20 +575,24 @@ body .block-04 .timeline .block1 p .ano, body .block-04 .timeline .block2 p .ano
   font-size: 12px;
   font-weight: 600;
 }
-body .block-04 .timeline .block1 p:nth-child(odd), body .block-04 .timeline .block2 p:nth-child(odd) {
+body .block-04 .timeline .block1 .section .subtitle, body .block-04 .timeline .block1 .section .scholl, body .block-04 .timeline .block1 .section .date, body .block-04 .timeline .block2 .section .subtitle, body .block-04 .timeline .block2 .section .scholl, body .block-04 .timeline .block2 .section .date {
+  margin: 5px 0;
+  letter-spacing: 1px;
+}
+body .block-04 .timeline .block1 .section:nth-child(odd), body .block-04 .timeline .block2 .section:nth-child(odd) {
   border-right: 3px solid;
   padding-left: 0;
 }
-body .block-04 .timeline .block1 p:nth-child(odd) .ano, body .block-04 .timeline .block2 p:nth-child(odd) .ano {
+body .block-04 .timeline .block1 .section:nth-child(odd) .ano, body .block-04 .timeline .block2 .section:nth-child(odd) .ano {
   left: 100%;
   margin-left: -20px;
   top: calc(50% - 26px);
 }
-body .block-04 .timeline .block1 p:nth-child(even), body .block-04 .timeline .block2 p:nth-child(even) {
+body .block-04 .timeline .block1 .section:nth-child(even), body .block-04 .timeline .block2 .section:nth-child(even) {
   border-left: 3px solid;
   padding-right: 0;
 }
-body .block-04 .timeline .block1 p:nth-child(even) .ano, body .block-04 .timeline .block2 p:nth-child(even) .ano {
+body .block-04 .timeline .block1 .section:nth-child(even) .ano, body .block-04 .timeline .block2 .section:nth-child(even) .ano {
   right: 100%;
   margin-right: -20px;
   top: calc(50% - 26px);
@@ -1059,12 +1092,14 @@ body .block-05 .bg .shape:nth-child(60) {
 }
 body .block-05 .content {
   padding-top: 50px;
-  margin-top: -630px;
+  margin-top: -610px;
   z-index: 2;
   position: relative;
   background-color: rgba(0, 0, 0, 0.9);
-  height: 600px;
+  height: 560px;
   margin-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 body .block-05 .content .title {
   font-size: 36px;
