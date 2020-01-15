@@ -1208,6 +1208,9 @@ body .menu .line {
   margin: 4px 0;
   filter: drop-shadow(3px 3px 0px #000);
 }
+body .txtHidden {
+  font-size: 0px;
+}
 
 @-webkit-keyframes color-change {
   0% {

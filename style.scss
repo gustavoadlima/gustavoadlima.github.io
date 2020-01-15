@@ -791,6 +791,10 @@ body{
             filter: drop-shadow(3px 3px 0px #000);
         }
     }
+
+    .txtHidden{
+        font-size: 0px;
+    }
 }      
 // animação de pulsação cores vermelhas
 @-webkit-keyframes color-change {
