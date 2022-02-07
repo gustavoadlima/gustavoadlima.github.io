@@ -178,9 +178,10 @@ body .block-02 .gallery {
   max-width: 800px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 200px));
+  grid-template-columns: repeat(3, minmax(200px, 200px));
   grid-template-rows: 1fr 1fr;
   grid-gap: 2px;
+  justify-content: center;
 }
 body .block-02 .gallery .gallery-item {
   max-width: 200px;
